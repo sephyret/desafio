@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+   db:
+      image: mysql
+      container_name: mysql
+      environment:
+         MYSQL_ROOT_PASSWORD: root
+      ports:
+      - "3306:3306"
+      volumes:
+      - data:/var/lib/mysql
+      
+   rabbit:
+      image: "rabbitmq:3-management"
+      environment:
+         RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+         RABBITMQ_DEFALT_USER: "guest"
+         RABBITMQ_DEFALT_PASS: "guest"
+         RABBITMQ_DEFALT_VHOST: "/"
+      ports:
+        - "15672:15672"
+        - "5672:5672"
+      
+volumes:
+   data: 
