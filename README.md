@@ -13,7 +13,7 @@ Além disto é bom ter um editor para trabalhar com o código como [Eclipse](htt
 $ git clone <https://github.com/sephyret/desafio>
 
 # Vá para a pasta do projeto
-$ cd desario
+$ cd desafio
 
 # Execute a aplicação em modo de desenvolvimento
 $ docker-compose up
